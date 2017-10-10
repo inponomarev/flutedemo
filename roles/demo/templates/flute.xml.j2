@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="https://corchestra.ru/static/schema/fluteconfig.xsd">
+	<dbconnstring>jdbc:postgresql://localhost:5432/{{ postgresdb }}</dbconnstring>
+	<dbuser>{{ postgreuser }}</dbuser>
+	<dbpassword>{{ postgrespwd }}</dbpassword>
+	<neverstop>true</neverstop>
+	<retrywait>50000</retrywait>
+	<scorepath>/var/opt/flute/score</scorepath>
+	<fluteuserid>super</fluteuserid>
+	<pylibpath>/opt/jython/Lib:/opt/jython/Lib/site-packages</pylibpath>
+	<javalibpath>/opt/flute/lib</javalibpath>
+    <restport>{{ restport }}</restport>
+</config>

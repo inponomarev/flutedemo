@@ -1,0 +1,17 @@
+- name: copy demo score
+  copy:
+    src: files/demo
+    dest: /var/opt/flute/score
+    mode: "0755"
+    owner: flute3
+
+- name: copy template
+  template:
+    src: templates/flute.xml.j2
+    dest: /opt/flute/flute.xml
+    mode: "0644"
+    
+#- name: start flute service
+#  service: 
+#    name: flute
+#    state: started

@@ -1,0 +1,17 @@
+oracle_java_version: 8
+oracle_java_version_update: 131
+
+flute_url: http://jenkins.curs.ru:1111/job/Flute/127/artifact/target/flute-6.0.3218_build127.jar
+flute_lib_url: http://jenkins.curs.ru:1111/job/Flute/127/artifact/target/Libraries-6.0.3218_build127.zip
+flute_version: flute-6.0.3218
+
+postgresdb: celestademo
+postgreuser: postgres
+postgrespwd: 1234
+restport: 8888
+
+postgresql_databases:
+  - name: "{{ postgresdb }}"
+postgresql_users:
+  - name: "{{ postgreuser }}"
+    password: "{{ postgrespwd }}"
