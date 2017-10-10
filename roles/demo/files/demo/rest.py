@@ -3,10 +3,11 @@ from org.springframework.web.reactive.function.server import ServerResponse
 from reactor.core.publisher import Mono
 import basic_operations
 
-@Mapping('/postorder')
+@Mapping('/postorder', 'POST')
 def postorder(context, flute, request):
     doc = request.bodyToMono(dict).block()
     basic_operations.post_order(context, doc)
+    return ServerResponse.ok().body(Mono.just('OK'), str)
 
 @Mapping('/foo', 'GET')
 def foo(context, flute, request):

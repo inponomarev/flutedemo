@@ -11,7 +11,7 @@
     dest: /opt/flute/flute.xml
     mode: "0644"
     
-#- name: start flute service
-#  service: 
-#    name: flute
-#    state: started
+- name: start flute service
+  service: 
+    name: flute
+    state: started
