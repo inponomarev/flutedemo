@@ -1,0 +1,8 @@
+- name: configure demo server
+  hosts: celestademo
+  roles:
+    - role: ansiblebit.oracle-java
+    - role: geerlingguy.postgresql
+    - role: inponomarev.flute
+
+    #- role: demo
